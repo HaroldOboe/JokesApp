@@ -1,4 +1,5 @@
 async function loadJoke() {
+  document.getElementById("loader").style.display = "block";
   document.getElementById("setup").innerHTML = "";
   document.getElementById("delivery").innerHTML = "";
   document.getElementById("joke").innerHTML = "";
@@ -16,14 +17,17 @@ async function loadJoke() {
     const data = await response.json();
 
     if (!data.joke) {
+      document.getElementById("loader").style.display = "none";
       document.getElementById("setup").innerHTML = data.setup;
       document.getElementById("delivery").innerHTML = data.delivery;
     } else {
+      document.getElementById("loader").style.display = "none";
       document.getElementById("joke").innerHTML = data.joke;
     }
 
     console.log(`Load success! ${flags}`);
   } catch (error) {
+    document.getElementById("loader").style.display = "none";
     console.log(error);
   }
 }
