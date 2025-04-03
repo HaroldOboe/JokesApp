@@ -1,0 +1,32 @@
+<!-- Jokes App - Fetch and display random jokes. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jokes App</title>
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <div>
+      <h1>Jokes App</h1>
+      <p id="joke"></p>
+      <p id="setup"></p>
+      <p id="delivery"></p>
+      <button id="btn" onclick="loadJoke()">Want to hear a joke?</button>
+      <h5>Choose backlist flags: (Trigger Warning!!!)</h5>
+      <label for="nsfw-btn">nsfw:</label>
+      <input type="checkbox" name="flag" value="nsfw" />
+      <label for="religious-btn">religious:</label>
+      <input type="checkbox" name="flag" value="religious" />
+      <label for="political-btn">political:</label>
+      <input type="checkbox" name="flag" value="political" />
+      <label for="racist-btn">racist:</label>
+      <input type="checkbox" name="flag" value="racist" />
+      <label for="sexist-btn">sexist:</label>
+      <input type="checkbox" name="flag" value="sexist" />
+      <label for="explicit-btn">explicit:</label>
+      <input type="checkbox" name="flag" value="explicit" />
+    </div>
+  </body>
+</html>
